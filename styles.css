@@ -1,0 +1,438 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'oswald', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    align-items: center;
+    width: fit-content;
+
+}
+
+nav {
+    display:flex;
+    background-color: #61787F;
+    color: #FFFFFF;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #000000;
+}
+
+nav img {
+    max-width: 182px;
+    max-height: 130px;
+    padding: 2px 4px;
+}
+
+.btn{
+    background-color: #fa0b0b;
+    color: #FFFFFF;
+
+    border-radius: 25px;
+    padding: 2px 4px;
+    margin: 10px;
+    border: #fa0b0b   ;
+    text-align: center;
+    text-decoration: none;
+    width: 214px;
+    height: 36px;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.btn__bestfilm{
+
+    width: 91px;
+    height: 40px;
+}
+
+.btn__overlay{
+
+    width: 105,75 px;
+    height: 32,28 px;
+    background-color: #2D2C2C;
+    justify-content: right
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+  
+}
+
+.btn__moins{
+     display : none;
+}
+
+.btn__container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.logo__container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container{
+    padding: 5px 20px;
+}
+
+#logo {
+    width: 182px;
+    height: 130px;
+    margin: 10px;
+    padding: 2px 4px;
+    
+}
+
+
+#name {
+    display: none;
+    font-size: 40px;
+    font-weight: 300;
+    align-self: center;
+    margin: 10px;
+}
+
+#bestfilm {
+    display: grid;
+    justify-content: center;
+    margin: 10px;
+    border: #000000 6px solid;
+    /* width: 329px;
+    height: 463px; */
+    box-sizing: content-box;
+}
+
+.btn__bestfilm-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.card-img-container {
+    overflow: hidden;
+    position: relative;
+    width: 278px;
+    height: 241px;
+    
+
+}
+
+.card-img-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    transform-origin: center;
+    
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 10px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 10px;
+    text-align: left;
+    }
+
+.card-description {
+    font-size: 16px;
+    font-weight: 200;
+    margin: 10px;
+    text-align: left;
+    line-height: 23.71px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+.gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 329px;
+    position: relative;
+    margin: 5px;
+}
+
+.gallery-item img {
+    max-width: 329px;
+    max-height: 329px;
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 10%;
+    bottom: 40%;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0; /* Cache l'overlay par défaut */
+    transition: opacity 0.3s ease-in-out; /* Animation de transition */
+}
+
+.gallery-item:hover .overlay {
+    
+    opacity: 1; /* Affiche l'overlay au survol */
+  }
+
+
+/* tablet styles */
+@media (min-width: 768px) {
+    body {
+        padding: 40px;
+    }
+
+    nav {
+        padding: 20px;
+    }
+
+    #name {
+        display: block;
+    }
+
+    #bestfilm {
+        display: flex;
+        
+        height: 271px;
+        box-sizing: content-box;
+        width: 90%;
+        padding-right: 10px;
+          
+    }
+
+    .card-img-container {
+        
+        position: relative;
+        gap: 10px;
+        grid-column: 1/2;
+        grid-row : 1/4;
+        width: 100%;
+        height: auto;
+
+    }
+
+    .gallery-item {
+        max-width: 295px;
+        margin: 30px;
+    }
+
+    .card-img-container img {
+        position: relative;
+        top : 0%;
+        left : 0%;
+        transform: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 2fr 2fr;
+    }
+
+    .card-title {
+        font-size: 48px;
+        grid-column: 2/3;
+        grid-row : 1/2;
+    }
+    
+    .card-description {
+        font-size: 28px;
+        grid-column: 2/3;
+        grid-row : 2/3;
+    }
+
+    .card btn{
+        grid-column: 2/3;
+        grid-row : 3/4;
+    }
+
+    h2 {
+        font-size: 64px;
+    }
+
+    h3 {
+        font-size: 64px;
+    }
+
+    .gallery-container {
+        flex-direction: row;
+    }    
+    
+
+    .hidden {
+        display: block;
+    }
+    
+    .btn__bestfilm{
+
+        width: 123px;
+        height: 49px;
+    }
+
+    .btn__moins{
+        display : block;
+    }
+
+    .btn__plus{
+        display : none;
+    }
+
+    .btn__overlay{
+
+        width: 93.64 px;
+        height: 28.9 px;
+       
+    }
+
+    h2{
+        text-align: left;
+        font-size: 40px;
+    }
+
+    .overlay h3{
+        font-size: 24px;
+    }
+
+}
+
+/* desktop styles */
+@media (min-width: 1024px) {
+    body {
+        padding: 60px;
+        max-width: 1054px;
+    }
+
+    nav {
+        padding: 30px;
+    }
+
+    #name {
+        display: block;
+    }
+
+    #bestfilm {
+        display: flex;
+        box-sizing: content-box;
+        width: 90%;
+          
+    }
+
+    .card-img-container {
+        
+        position: relative;
+        gap: 10px;
+        grid-column: 1/2;
+        grid-row : 1/4;
+        width: 100%;
+        height: auto;
+
+    }
+
+    .card{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 2fr 2fr;
+    }
+
+    .card-title {
+        font-size: 48px;
+        grid-column: 2/3;
+        grid-row : 1/2;
+    }
+    
+    .card-description {
+        font-size: 28px;
+        grid-column: 2/3;
+        grid-row : 2/3;
+    }
+
+    .card btn{
+        grid-column: 2/3;
+        grid-row : 3/4;
+    }
+   
+
+    h2 {
+        font-size: 48pxpx;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        flex-direction: row;
+        
+    }
+
+    .gallery-item{
+        width: 100%;
+        border: 1px solid #000000;
+        max-width: 252px;
+        max-height: 252px;
+    }
+
+    .gallery-item img {
+        max-width: 252px;
+        max-height: 252px;
+        margin : 0px;
+        padding: 0;
+    }
+
+    .hidden {
+        display: block;
+    }
+
+    .btn__moins{
+        display : none;
+    }
+
+    .btn__plus{
+        display : none;
+    }
+
+    .btn__overlay{
+
+        width: 81 px;
+        height: 25 px;
+       
+    }
+}
+
